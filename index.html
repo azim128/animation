@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+    .typewriter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .spacing {
+      height: 5rem;
+    }
+    .typewriter-text {
+      font-size: 6rem;
+      font-weight: bold;
+      background: #121fcf;
+      background: linear-gradient(to right, #121fcf 0%, #cf1512 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #333;
+      overflow: hidden;
+      border-right: 2px solid #333;
+      white-space: nowrap;
+      width: 40%;
+      letter-spacing: 0.1em;
+      animation: typing 6s linear, blink-caret 0.5s step-end infinite;
+      animation-delay: 2s;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 40%;
+      }
+    }
+
+    @keyframes blink-caret {
+      from,
+      to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: #333;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      .typewriter-text {
+        font-size: 4rem;
+      }
+
+      ul li span {
+        line-height: 4rem !important;
+        font-size: 4rem !important;
+      }
+      ul li {
+        height: 4.5rem !important;
+        margin-bottom: 0.5rem !important;
+      }
+      .spacing {
+        height: 2rem !important;
+      }
+    }
+
+    ul {
+      position: absolute;
+      width: 100%;
+      top: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    ul li {
+      height: 6.5rem;
+      display: flex;
+      overflow: hidden;
+      margin-bottom: 0.5rem;
+      justify-content: center;
+    }
+    ul li span {
+      display: inline-block;
+      line-height: 6rem;
+      font-size: 6rem;
+
+      transform: translateY(300%);
+      margin: 0.05rem;
+    }
+    ul li span.active {
+      transform: translateY(0%);
+      transition: 1s ease-out;
+    }
+    ul li:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+
+    .lastt {
+      font-family: "LoveFromSerifL-Italic-Var", "LoveFromSerifL-Italic-420";
+      font-style: italic;
+    }
+  </style>
+  <body>
+    <div class="typewriter">
+      <h1 class="typewriter-text">LoveForm</h1>
+    </div>
+
+    <ul>
+      <li><span class="allList">is a creative</span></li>
+      <li><span class="allList">collective.</span></li>
+      <li class="spacing"><span class="allList"> </span></li>
+      <li><span class="allList">We are</span></li>
+      <li><span class="allList">designers</span></li>
+      <li><span class="allList">architects</span></li>
+      <li><span class="allList">musicians</span></li>
+      <li><span class="allList">filmmakers</span></li>
+      <li><span class="allList">writers</span></li>
+      <li><span class="allList">engineers</span></li>
+      <li><span class="allList">and</span></li>
+      <li><span class="allList">artist</span></li>
+      <li class="spacing"></li>
+      <li><span class="allList">You may</span></li>
+      <li><span class="allList">know us</span></li>
+      <li><span class="allList">by our</span></li>
+      <li><span class="allList">past work.</span></li>
+      <li class="spacing"></li>
+      <li><span class="allList"> We are </span></li>
+      <li><span class="allList">obsessed with</span></li>
+      <li><span class="allList"> the traditions</span></li>
+      <li><span class="allList">of creating</span></li>
+      <li><span class="allList">and making.</span></li>
+      <li class="spacing"></li>
+      <li><span class="allList">Fanatically</span></li>
+      <li><span class="allList">devoted to</span></li>
+      <li><span class="allList">excellence</span></li>
+      <li class="spacing"></li>
+      <li><span class="allList">Insatiably</span></li>
+      <li><span class="allList">curious.</span></li>
+      <li class="spacing"></li>
+      <li><span class="allList">We collaborate</span></li>
+      <li><span class="allList">with leaders</span></li>
+      <li><span class="allList">and founders.</span></li>
+      <li class="spacing"></li>
+      <li><span class="allList">We work on</span></li>
+      <li><span class="allList">projects for joy</span></li>
+      <li class="spacing"></li>
+      <li><span class="allList">We develop</span></li>
+      <li><span class="allList">our own ideas</span></li>
+      <li>
+        <span class="allList"><br /></span>
+      </li>
+      <li><span class="allList" class="lastt">love & fury</span></li>
+    </ul>
+
+    <script>
+      //list
+      let lisItem = [...document.querySelectorAll(".allList")];
+
+      window.addEventListener("scroll", () => {
+       
+
+        lisItem.forEach((item, index) => {
+         console.log(item)
+           item.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
